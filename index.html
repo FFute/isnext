@@ -220,7 +220,7 @@
                 ];
 
                 const filteredResults = simulatedResponse.filter(app =>
-                    (!filter || app.platform.toLowerCase().includes(filter.toLowerCase()))
+                    (!filter || app.platform.toLowerCase() === filter.toLowerCase())&&(!searchInput||app.name.toLowerCase().includes(searchInput.toLowerCase()))
                 );
 
                 // Render Results
