@@ -91,7 +91,6 @@
             //    alert('Please enter an app name or ID.');
             //    return;
             //}
-
             // Show loading
             loadingIndicator.classList.remove('hidden');
             resultsSection.classList.add('hidden');
@@ -168,7 +167,7 @@
                 ];
 
                 const filteredResults = simulatedResponse.filter(app =>
-                    (!filter || app.platform.toLowerCase() === filter.toLowerCase())
+                    (!filter || app.platform.toLowerCase().includes(filter.toLowerCase()))
                 );
 
                 // Render Results
